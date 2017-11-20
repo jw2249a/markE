@@ -38,7 +38,7 @@
 #define HAVE_ATOL 1
 
 /* Define to 1 if platform reads and writes files atomically. */
-/* #undef HAVE_ATOMICFILEREAD */
+#define HAVE_ATOMICFILEREAD 1
 
 /* Define to 1 to use GCC's built-in atomic operations. */
 #define HAVE_ATOMIC_GCC_BUILTIN 1
@@ -54,10 +54,10 @@
 /* #undef HAVE_ATOMIC_X86_GCC_ASSEMBLY */
 
 /* Define to 1 if you have the `backtrace' function. */
-#define HAVE_BACKTRACE 1
+/* #undef HAVE_BACKTRACE */
 
 /* Define to 1 if you have the `backtrace_symbols' function. */
-#define HAVE_BACKTRACE_SYMBOLS 1
+/* #undef HAVE_BACKTRACE_SYMBOLS */
 
 /* Define to 1 if you have the `bsearch' function. */
 #define HAVE_BSEARCH 1
@@ -161,7 +161,7 @@
 #define HAVE_GETOPT 1
 
 /* Define to 1 if getopt supports the optreset variable. */
-/* #undef HAVE_GETOPT_OPTRESET */
+#define HAVE_GETOPT_OPTRESET 1
 
 /* Define to 1 if you have the `getrusage' function. */
 #define HAVE_GETRUSAGE 1
@@ -182,7 +182,7 @@
 #define HAVE_HSTRERROR 1
 
 /* Define to 1 if you have the `initstate_r' function. */
-#define HAVE_INITSTATE_R 1
+/* #undef HAVE_INITSTATE_R */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #define HAVE_INTTYPES_H 1
@@ -431,7 +431,7 @@
 #define HAVE_RANDOM 1
 
 /* Define to 1 if you have the `random_r' function. */
-#define HAVE_RANDOM_R 1
+/* #undef HAVE_RANDOM_R */
 
 /* Define to 1 if building replication support. */
 #define HAVE_REPLICATION 1
@@ -473,7 +473,7 @@
 #define HAVE_SNPRINTF 1
 
 /* Define to 1 if you have the `srandom_r' function. */
-#define HAVE_SRANDOM_R 1
+/* #undef HAVE_SRANDOM_R */
 
 /* Define to 1 if you have the `stat' function. */
 #define HAVE_STAT 1

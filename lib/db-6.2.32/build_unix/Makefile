@@ -38,7 +38,7 @@ RANLIB=	ranlib
 RM=	rm -f
 SHELL=	/bin/sh
 STRIP=	strip
-SED=	/bin/sed
+SED=	/usr/bin/sed
 PERL=	
 
 ##################################################
@@ -59,7 +59,7 @@ SOFLAGS=	-rpath $(libdir)
 LIBMAJOR=	6
 LIBVERSION=	6.2
 
-CPPFLAGS=	-I$(builddir) -I$(srcdir)  -D_GNU_SOURCE -D_REENTRANT
+CPPFLAGS=	-I$(builddir) -I$(srcdir)  -D_THREAD_SAFE
 
 ##################################################
 # C API.
@@ -68,9 +68,9 @@ CFLAGS=		-c $(CPPFLAGS) -O3
 CC=		$(LIBTOOL) --mode=compile cc
 CCLINK=		$(LIBTOOL) --mode=link cc -O3 
 
-LDFLAGS=	
+LDFLAGS=	 -pthread
 LIBS=		 -lpthread
-TEST_LIBS=	 -lm -lnsl
+TEST_LIBS=	 -lm
 LIBCSO_LIBS=	  -lpthread
 
 libdb_base=	libdb
@@ -199,7 +199,7 @@ libtso_major=	$(libtcl_base)-$(LIBMAJOR).so
 # local libraries, for example.  Do that by adding -I options to the DB185INC
 # line, and -l options to the DB185LIB line.
 ##################################################
-DB185INC=	-c -O3  -I$(topdir)  -D_GNU_SOURCE -D_REENTRANT
+DB185INC=	-c -O3  -I$(topdir)  -D_THREAD_SAFE
 DB185LIB=
 
 ##################################################
