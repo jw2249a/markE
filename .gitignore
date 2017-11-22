@@ -2,6 +2,7 @@ notes.txt
 *.Rproj
 .Rproj.user
 *.Rhistory
+Doxyfile
 *.o
 *so
 .gitignore
