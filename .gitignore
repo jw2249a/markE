@@ -1,5 +1,10 @@
 notes.txt
-'#*'
+*.Rproj
+.Rproj.user
+*.Rhistory
+*.o
+*so
+.gitignore
+*#*
 .*
-'#Project.ede#'
-Project.ede
+*.ede

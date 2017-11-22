@@ -1,6 +1,0 @@
-;; Object markE
-;; EDE Project Files are auto generated: Do Not Edit
-(ede-proj-project "markE"
-  :file "Project.ede"
-  :name "markE"
-  :targets nil)
