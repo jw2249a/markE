@@ -2,6 +2,9 @@
 /* define branches */
 typedef struct _branch {
   char *name;
+  char *date;
+  char *user;
+  struct _branch *origin;
 } BRANCH;
 /* define applications */
 typedef struct _app {
