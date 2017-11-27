@@ -22,14 +22,17 @@ int main(int argc, char *argv[])
     {
       /* error handling goes here*/
     }
-  ret = dbp->open(dbp,NULL,database, NULL, DB_BTREE, flags, 0);
+  /* opening a database */
+  //ret = dbp->open(dbp,NULL,database, NULL, DB_BTREE, flags, 0);
   if (ret != 0)
     {
       /* error handling goes here*/
     }
   if (dbp != NULL)
     {
-      dbp->close(dbp,0);
+      /*closing a database*/
+      // dbp->close(dbp,0);
+      dbp->remove(dbp,database, NULL, 0);
     }
   return 0;
 }
