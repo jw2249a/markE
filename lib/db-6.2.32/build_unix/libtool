@@ -72,7 +72,7 @@ build=x86_64-unknown-freebsd11.1
 build_os=freebsd11.1
 
 # A sed program that does not truncate output.
-SED="/usr/bin/sed"
+SED="/usr/local/bin/gsed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"

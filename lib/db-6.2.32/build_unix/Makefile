@@ -12,7 +12,7 @@ builddir=.
 ##################################################
 # Installation directories and permissions.
 ##################################################
-prefix=	/usr/local/BerkeleyDB.6.2
+prefix=	/usr
 exec_prefix=${prefix}
 bindir=	${exec_prefix}/bin
 includedir=${prefix}/include
@@ -38,7 +38,7 @@ RANLIB=	ranlib
 RM=	rm -f
 SHELL=	/bin/sh
 STRIP=	strip
-SED=	/usr/bin/sed
+SED=	/usr/local/bin/gsed
 PERL=	
 
 ##################################################
@@ -268,7 +268,7 @@ XA_OBJS=\
 # When DTrace is enabled it may need to post-process (with -G) most of the
 # object files in order to generate the additional objects in .
 
-DTRACE_OBJS= mut_tas.lo mut_pthread.lo  $(BTREE_OBJS) $(HASH_OBJS) $(HASH_VRFY_OBJS) $(HEAP_OBJS) $(HEAP_VRFY_OBJS) $(QUEUE_OBJS) $(QUEUE_VRFY_OBJS) $(REP_OBJS) $(REPMGR_OBJS) $(BTREE_VRFY_OBJS) $(LOG_VRFY_OBJS) $(LOCK_OBJS) $(MUTEX_OBJS)  $(CRYPTO_OBJS) \
+DTRACE_OBJS= mut_tas.lo mut_pthread.lo  $(BTREE_OBJS) $(HASH_OBJS) $(HASH_VRFY_OBJS) $(HEAP_OBJS) $(HEAP_VRFY_OBJS) $(QUEUE_OBJS) $(QUEUE_VRFY_OBJS) $(REP_OBJS) $(REPMGR_OBJS) $(BTREE_VRFY_OBJS) $(LOG_VRFY_OBJS) $(LOCK_OBJS) $(MUTEX_OBJS) dbm.lo hsearch.lo  $(CRYPTO_OBJS) \
 	blob_fileops.lo blob_page.lo blob_stream.lo blob_util.lo \
 	clock.lo crdel_auto.lo crdel_rec.lo db.lo db_am.lo db_auto.lo \
 	db_backup.lo db_byteorder.lo db_cam.lo db_cds.lo db_compact.lo \
