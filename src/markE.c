@@ -4,12 +4,14 @@
 int main(int argc, char *argv[])
 {
   printf("there were %d commands\n", argc);
-  while (*argv != '\0')
+  if (argv[1] != '\0')
     {
-      printf("%s \n", *argv);
-      argv++;
+      initialize_project(argv[1]);
     }
-  initialize_project();
+  else
+    {
+      initialize_project(__FILE__);
+    }
   return 0;
 }
 

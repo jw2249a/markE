@@ -15,6 +15,6 @@ all: $(programs)
 .PHONY: clean
 clean:
 	rm *o
-	rm *.c.db
-	rm a.out
+	rm a.ou*
+	rm *.db
 
