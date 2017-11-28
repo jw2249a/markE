@@ -1,18 +1,20 @@
-CFLAGS = -g
+CFLAGS = -c
 LDLIBS = -ldb
 IDIR = ../include
-sources = markE.c
+sources = bdb.c markE.c
 headers = $(IDIR)
 programs = $(basename $(sources))
 
 .PHONY: all
 all: $(programs)
-%: %.c
-	$(CC) $(CFLAGS) $< $(LDLIBS) -o $@
+	$(CC) $(CFLAGS) $(sources)
+	$(CC) $(LDLIBS) *o -o a.out
 
 
 
 .PHONY: clean
 clean:
-	$(RM) $(programs) *.db
+	rm *o
+	rm *.c.db
+	rm a.out
 

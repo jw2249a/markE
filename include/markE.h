@@ -1,4 +1,5 @@
-#include <stdio.h>
+#ifndef MARKE_H
+#define MARKE_H
 /* define branches */
 typedef struct _branch {
   char *name;
@@ -10,9 +11,11 @@ typedef struct _branch {
 typedef struct _app {
   struct BRANCH *current;
   struct BRANCH *next;
-  struct _app *next;
+  struct _app *parent;
+  struct _app *child;
 } APP;
 /* relate apps to main project */ 
 typedef struct _project {
   struct APP *current;
 } project;
+#endif 
