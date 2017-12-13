@@ -63,16 +63,16 @@ ECHO="printf %s\\n"
 
 # The host system.
 host_alias=
-host=x86_64-unknown-freebsd11.1
-host_os=freebsd11.1
+host=x86_64-unknown-freebsd12.0
+host_os=freebsd12.0
 
 # The build system.
 build_alias=
-build=x86_64-unknown-freebsd11.1
-build_os=freebsd11.1
+build=x86_64-unknown-freebsd12.0
+build_os=freebsd12.0
 
 # A sed program that does not truncate output.
-SED="/usr/local/bin/gsed"
+SED="/usr/bin/sed"
 
 # Sed that helps us avoid accidentally triggering echo(1) options like -n.
 Xsed="$SED -e 1s/^X//"
@@ -269,7 +269,7 @@ finish_eval=""
 hardcode_into_libs=yes
 
 # Compile-time system search path for libraries.
-sys_lib_search_path_spec="/usr/lib/clang/4.0.0 /usr/lib "
+sys_lib_search_path_spec="/usr/lib/clang/5.0.0 /usr/lib "
 
 # Run-time system search path for libraries.
 sys_lib_dlsearch_path_spec="/lib /usr/lib"

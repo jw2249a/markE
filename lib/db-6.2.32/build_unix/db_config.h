@@ -84,7 +84,7 @@
 /* #undef HAVE_CTIME_R_3ARG */
 
 /* Define to 1 if building the DBM API. */
-#define HAVE_DBM 1
+/* #undef HAVE_DBM */
 
 /* Define to 1 if you have the `directio' function. */
 /* #undef HAVE_DIRECTIO */
