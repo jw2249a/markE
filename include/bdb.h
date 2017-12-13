@@ -6,4 +6,6 @@ DB *dbp;
 u_int32_t flags;
 int ret;
 
+/* function prototypes */
+
 #endif 

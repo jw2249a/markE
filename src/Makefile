@@ -1,20 +1,18 @@
-CFLAGS = -c
+CC = cc
+CFLAGS = -c 
 LDLIBS = -ldb
 IDIR = ../include
 sources = bdb.c markE.c
-headers = $(IDIR)
-programs = $(basename $(sources))
+headers = $(IDIR)/markE.h $(IDIR)/bdb.h
 
 .PHONY: all
 all: $(programs)
-	$(CC) $(CFLAGS) $(sources)
-	$(CC) $(LDLIBS) *o -o a.out
-
-
+	$(CC) $(CFLAGS) -I $(headers) $(sources)
+	$(CC) $(LDLIBS) *o -o main
 
 .PHONY: clean
 clean:
-	rm *o
-	rm a.ou*
+	rm main
+	rm *.o
 	rm *.db
 
