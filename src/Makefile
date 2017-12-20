@@ -1,4 +1,4 @@
-CC = cc
+CC = clang 
 CFLAGS = -c 
 LDLIBS = -ldb
 IDIR = ../include
@@ -15,4 +15,4 @@ clean:
 	rm main
 	rm *.o
 	rm *.db
-
+	rm ../env/*

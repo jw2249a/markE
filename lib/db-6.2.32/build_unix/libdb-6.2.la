@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/usr/contrib/bdb/lib'
+libdir='/usr/local/BerkeleyDB.6.2/lib'

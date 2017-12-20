@@ -14,7 +14,7 @@ builddir=.
 ##################################################
 prefix=	/usr/local/BerkeleyDB.6.2
 exec_prefix=${prefix}
-bindir=	/usr/local/bin
+bindir=	${exec_prefix}/bin
 includedir=${prefix}/include
 libdir=	${exec_prefix}/lib
 docdir=	$(prefix)/docs

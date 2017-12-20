@@ -185,7 +185,7 @@ func_exec_program ()
 
   if test -f "$progdir/$program"; then
     # Add our own library path to LD_LIBRARY_PATH
-    LD_LIBRARY_PATH="/usr/home/j011y_r0g3r/Packages/markE/lib/db-6.2.32/build_unix/.libs:$LD_LIBRARY_PATH"
+    LD_LIBRARY_PATH="/usr/home/jrw/Packages/markE/lib/db-6.2.32/build_unix/.libs:$LD_LIBRARY_PATH"
 
     # Some systems cannot cope with colon-terminated LD_LIBRARY_PATH
     # The second colon is a workaround for a bug in BeOS R4 sed
