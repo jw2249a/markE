@@ -18,7 +18,7 @@ int initialize_project(char *projectName)
     fprintf(stderr, "Environment open failure: %s\n", db_strerror(ret));
     return(ret);
   }
-  ret = db_create(&dbp, NULL, 0);
+  ret = db_create(&dbp, dbe, 0);
   db_flags = DB_CREATE;
   if (ret != 0)
     {

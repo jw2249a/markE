@@ -14,5 +14,4 @@ all: $(programs)
 clean:
 	rm main
 	rm *.o
-	rm *.db
 	rm ../env/*
