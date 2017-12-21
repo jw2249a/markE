@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
     }
   else
     {
-      initialize_project(__FILE__);
+      initialize_project(__BASE_FILE__);
     }
   return 0;
 }

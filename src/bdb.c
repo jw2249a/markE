@@ -1,9 +1,11 @@
 #include "../include/bdb.h"
 
+/* Initialize the environment and database(s) in that env */
 int initialize_project(char *projectName)
 {
   char projName[100];
   sprintf(projName, "%s.db", projectName);
+  /* begin Env init */
   ret = db_env_create(&dbe, env_flags);
   if (ret != 0) {
     fprintf(stderr, "Error creating env handle: %s\n", db_strerror(ret));
@@ -18,6 +20,8 @@ int initialize_project(char *projectName)
     fprintf(stderr, "Environment open failure: %s\n", db_strerror(ret));
     return(ret);
   }
+  /* end Env init */
+  /* begin db init */
   ret = db_create(&dbp, dbe, 0);
   db_flags = DB_CREATE;
   if (ret != 0)
@@ -32,19 +36,18 @@ int initialize_project(char *projectName)
       fprintf(stderr, "DB open failure: %s\n", db_strerror(ret));
       return(ret);
     }
+  /* end db init */
+  /* close Env and db */
   if (dbp != NULL)
     {
       /*closing a database*/
       dbp->close(dbp, 0);
-      //dbp->remove(dbp,projectname,NULL,0);
-      /* return success or error 
-      fprintf(stderr, "%s: %s/n", "my_program",
-              db_strerror(ret));
-      return(ret); */
+    printf("database closed...\n");
     }
   if (dbe != NULL) {
     /* closing the environment */
     dbe->close(dbe, 0);
+    printf("environment closed...\n");
   }
   return 0;
 }
