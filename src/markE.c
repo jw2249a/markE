@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "../include/bdb.h"
 #include "../include/markE.h"
 
 

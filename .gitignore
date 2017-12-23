@@ -1,4 +1,6 @@
-notes.txt
+*.txt
+*.yaml
+*.s
 main
 env/*
 *.gch
