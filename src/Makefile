@@ -11,7 +11,7 @@ headers = $(IDIR)/markE.h $(IDIR)/bdb.h
 all: 
 	$(CC) $(CFLAGS) -I $(headers) $(sources)
 	$(CC) $(LDLIBS) *o -o main
-
+	mkdir -p ../env
 .PHONY: review
 review:
 	$(CC) $(RFLAGS) $(headers) $(sources)
