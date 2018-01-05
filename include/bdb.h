@@ -8,6 +8,13 @@ u_int32_t db_flags;
 u_int32_t env_flags;
 int ret;
 
+/* transaction command */
+
+
 /* function prototypes */
-int initialize_project(char *name);
+void db(void);
+void dbenv(void);
+void dbcurs(void);
+
+
 #endif 

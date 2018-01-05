@@ -5,7 +5,7 @@ CFLAGS = -c
 LDLIBS = -ldb
 IDIR = ../include
 sources = bdb.c markE.c
-headers = $(IDIR)/markE.h $(IDIR)/bdb.h
+headers = $(IDIR)/bdb.h $(IDIR)/markE.h
 
 .PHONY: all
 all: 
@@ -13,6 +13,7 @@ all:
 	$(CC) $(LDLIBS) *o -o main
 	mkdir -p ../env
 .PHONY: review
+
 review:
 	$(CC) $(RFLAGS) $(headers) $(sources)
 	cat *.s > out
