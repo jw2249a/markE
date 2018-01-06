@@ -1,32 +1,37 @@
 #include <stdio.h>
 #include "../include/markE.h"
-
+int handler = 1;
 
 int main(int argc, char *argv[])
 {
-  if (argv[1] == '\0')
+  if (argc <= 1)
     {
     insufa:
-      fprintf(stderr, "Insufficient arguments\n  Usage: %s [-i] [file...]\n", argv[0]);                   return 1;
+      fprintf(stderr, "Arg[%d] Insufficient arguments\n  Usage: %s [-init] [file...]\n", handler,  argv[0]);
+      printf("%s\n", argv[handler]);
+      return 1;
     }
-  else if (argv[1][0] =='-')
+ commands:
+  if (argv[++handler]!='\0')
     {
-      switch (argv[1][1])
+      if (argv[--handler][0]=='-')
+        {
+          switch (argv[handler][1])
         {
         case 'i':
-          if (argv[2] != '\0')
-            {
-              initialize_project(argv[2]);
-            }
-          else
-            {
-              goto insufa;
-            }
-
+          initialize_project(argv[++handler]);
+          if (++handler < argc) goto commands;
+          else break;
+        }
+      }
+      else
+        {
+          goto insufa;
         }
     }
   else
     {
+      goto insufa;
     }
   return 0;
 }

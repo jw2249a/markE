@@ -16,5 +16,4 @@ void db(void);
 void dbenv(void);
 void dbcurs(void);
 
-
 #endif 
